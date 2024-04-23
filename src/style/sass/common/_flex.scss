@@ -1,0 +1,42 @@
+@mixin center($row, $content, $value) {
+    -webkit-justify-content: $content;
+    justify-content: $content;
+    -webkit-align-items: $value;
+    align-items: $value;
+
+    @if $row== column {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    @else if $row==column2 {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    @else if $row==row {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    @else if $row==row2 {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+
+@mixin flex($row,$content, $value) {
+    @include center($row,$content, $value);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+

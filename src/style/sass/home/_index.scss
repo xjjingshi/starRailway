@@ -1,0 +1,15 @@
+@import '../common/all';
+
+.body_box {
+
+    font-size: 18px;
+    font-weight: bold;
+    @include flex(row, center,center );
+    div {
+        flex: 1;
+    }
+
+}
+.arrow_top {
+    @include arrow(top, 8px,green )
+}
