@@ -1,15 +1,19 @@
 @import '../common/all';
 
+#root {
+    height: 100%;
+}
 .body_box {
 
     font-size: 18px;
     font-weight: bold;
-    @include flex(row, center,center );
-    div {
-        flex: 1;
-    }
+    @include flex(column, center,center );
+   height: 100%;
 
 }
 .arrow_top {
     @include arrow(top, 8px,green )
+}
+.content-center {
+    flex: 1;
 }
